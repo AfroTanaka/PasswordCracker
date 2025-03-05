@@ -7,7 +7,6 @@ string input(string s)
     cout << "Target text: ";
     cin >> s;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
-    // //cin.get();
     cin.clear();
     return s;
 }
@@ -21,9 +20,7 @@ void decipherWithCaesar(string s)
             cout << "\033[32m" << (char)((s[j] - 'a' + i) % 26 + 'a') << "\033[0m";
         }
         cout << endl;
-        //cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cin.ignore();
-        //cin.get();
         cin.clear();
     }
 }
